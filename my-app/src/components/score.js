@@ -1,2 +1,2 @@
 // Deal with the score
-import React from "react";
+//import React from "react";
