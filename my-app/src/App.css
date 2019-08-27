@@ -1,12 +1,6 @@
-.App {
+.Display {
   text-align: center;
   font-family: 'Lakki Reddy', cursive;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 10s linear;
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .App-header {
@@ -20,15 +14,6 @@
   color: rgb(185, 26, 114);
 }
 
-.App-link {
-  color: #cf61fb3f;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lead {
+  font-size: 26px;
 }

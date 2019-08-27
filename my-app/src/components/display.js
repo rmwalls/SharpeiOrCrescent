@@ -20,7 +20,7 @@ class Display extends Component {
                 <div className="jumbotron" >
                     <p className="lead">Click on the images, score points by not clicking the same image twice</p>
                     <hr />
-                    <p>This is just some more text</p>
+                    <p>Are they sharpeis or crescent rolls?</p>
                     {
                         this.state.data.map(item => (
                             <img src={item.image} alt="game pic" /> 
