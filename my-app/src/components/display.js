@@ -18,7 +18,7 @@ class Display extends Component {
                     <h1 className="display-4">Let's Play a Game!</h1>
                     </header>
                 <div className="jumbotron" >
-                    <p className="lead">Click on the images, score points by not clicking the same image twice</p>
+                    <p className="lead">Click on the images. Score points by not clicking the same image twice.</p>
                     <hr />
                     <p>Are they sharpeis or crescent rolls?</p>
                     {
