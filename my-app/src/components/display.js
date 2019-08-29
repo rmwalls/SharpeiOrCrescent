@@ -3,14 +3,15 @@ import React, { Component } from "react";
 import data from '../images.json'
 class Display extends Component {
     state = {
-        test: "monkey",
-        data
+        data,
+        currentScore: 0,
+        topScore: 0
     }
-    componentDidMount() {
-        this.setState({
-            data: data
-        })
-    }
+    // componentDidMount() {
+    //     this.setState({
+    //         data: data
+    //     })
+    // }
     render() {
         return (
             <div className="Display" >
@@ -20,12 +21,16 @@ class Display extends Component {
                 <div className="jumbotron" >
                     <p className="lead">Click on the images. Score points by not clicking the same image twice.</p>
                     <hr />
-                    <p>Are they sharpeis or crescent rolls?</p>
+                    <h2>Are they sharpeis or crescent rolls?</h2>
+                    <div class="grid-container">
                     {
                         this.state.data.map(item => (
-                            <img src={item.image} alt="game pic" /> 
+                            <div class="grid-item">
+                                <img src={item.image}  alt="game pic" /> 
+                            </div>
                         ))
                     }
+                    </div>
                 </div>
             </div>
         )
