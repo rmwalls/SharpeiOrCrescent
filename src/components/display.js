@@ -1,6 +1,10 @@
-// Display the images on the page
+// This file primarily displays the images and stateless components on the page
 import React, { Component } from "react";
-import data from '../images.json'
+import data from '../images.json';
+import Footer from "./footer";
+import Header from "./header";
+import Score from "./score";
+
 class Display extends Component {
     state = {
         data,
@@ -16,32 +20,6 @@ class Display extends Component {
             status: ""
         })
     }
-    render() {
-        return (
-            <div className="Display" >
-                <header className="App-header" >
-                    <h1 id="site_title">Let's Play a Game!</h1>
-                    <h2 id="site_title">Click on the images. <br></br>Score points by not clicking the same image twice.</h2>
-                    <p className="label">(Are they sharpeis or crescent rolls?)</p>
-                </header>
-                {console.log("currentScore = " + this.state.currentScore)}
-                <div className="gameScore">
-                    <h3 className="score">Your Score =  {this.state.currentScore}</h3>
-                    <h3 className="status">{this.state.status}</h3>
-                </div>
-                <div className="grid-container">
-                    {
-                        this.state.data.map(item => (
-                            <div className="grid-item">
-                                <img src={item.image} id={item.id} alt="game pic" onClick={() => this.handleButtonClicks(item.id)} />
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
-        )
-    }
-    //shuffle the cards in the browser when clicked
     handleButtonClicks = id => {
         let clickedIds = this.state.clickedIds;
  
@@ -64,13 +42,24 @@ class Display extends Component {
             }}
         }
     }
+    render() {
+        return (
+            <div className="Display" >
+                <Header />
+                {console.log("currentScore = " + this.state.currentScore)}
+                <Score {...this.state}/>
+                <div className="grid-container">
+                    {   //map over the images array and display each in a grid cell. When one is clicked, handle it
+                        this.state.data.map(item => (  
+                            <div className="grid-item">
+                                <img src={item.image} id={item.id} alt="game pic" onClick={() => this.handleButtonClicks(item.id)} />
+                            </div>
+                        ))
+                    }
+                </div>
+               <Footer />
+            </div>
+        )
+    }
 }
 export default Display
-
-
-// need to make onClick - handleButtonClicks to do the logic
-    //shuffle images
-    //check if clicked before
-    //deal with score
-    // keep going or start over?
-        //play again? 
