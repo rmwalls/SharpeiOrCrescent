@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The game is deployed on Heroku here --> https://sharpeiorcrescent.herokuapp.com/  
 
+<img src="/public/img/game_screenshot.jpg" alt="game screenshot image">
+
 ### Playing and Scoring
 
 There are 12 images in the game. Some are dogs of breed Sharpei, https://en.wikipedia.org/wiki/Shar_Pei, others <br>
