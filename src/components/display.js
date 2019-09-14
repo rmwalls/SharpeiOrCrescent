@@ -1,4 +1,4 @@
-// This file primarily displays the images and stateless components on the page
+// This file primarily displays the images and components on the page
 import React, { Component } from "react";
 import data from '../images.json';
 import Footer from "./footer";
